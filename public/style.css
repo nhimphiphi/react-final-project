@@ -1,0 +1,13 @@
+body {
+  font-size: 16px;
+  font-family: 'Tahoma', sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto 0 auto;
+}
+
+.todo-list {
+  margin: 30px 0;
+}
