@@ -11,3 +11,8 @@ body {
 .todo-list {
   margin: 30px 0;
 }
+
+.completed {
+  text-decoration: line-through;
+  color: rgba(0,0,0,.5);
+}

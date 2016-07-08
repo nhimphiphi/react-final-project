@@ -1,37 +1,49 @@
 import React, { PropTypes } from 'react';
 import TodoItem from './TodoItem';
 import { connect } from 'react-redux';
+import { toggleTodo } from '../actions/todo';
+import {
+  FILTER_ALL,
+  FILTER_ACTIVE,
+  FILTER_COMPLETED
+} from '../constants';
 
-const TodoList = ({ list }) => (
+const TodoList = ({ todos, ...rest }) => (
   <ul className="todo-list row">
-    {list.map((todo, key) => (
-      <TodoItem {...todo} key={key} />
+    {todos.map((todo, key) => (
+      <TodoItem {...todo} {...rest} key={key} />
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  list: PropTypes.array
+  todos: PropTypes.array,
+  onToggle: PropTypes.func
 };
 
-TodoList.defaultProps = {
-  list: [
-    { name: 'item 1', completed: false },
-    { name: 'item 2', completed: true }
-  ]
+const visibleTodos = (todos, filter) => {
+  switch (filter) {
+    case FILTER_ALL:
+      return todos;
+    case FILTER_ACTIVE:
+      return todos.filter(t => !t.completed);
+    case FILTER_COMPLETED:
+      return todos.filter(t => t.completed);
+    default:
+      return todos;
+  }
 };
 
 const mapStateToProps = (state) => {
   return {
-    visibleTodoList: state.todo
+    todos: visibleTodos(state.todos, state.filter)
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAddTodo: (title) => dispatch({
-    })
-  }
+    onToggle: (id) => dispatch(toggleTodo(id))
+  };
 };
 
-export default TodoList;
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
