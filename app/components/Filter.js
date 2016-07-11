@@ -1,42 +1,15 @@
 import React, { PropTypes } from 'react';
-import { changeFilter } from '../actions/todo';
-import { connect } from 'react-redux';
+import NavLink from './NavLink';
 
-const Filter = ({ active, onClick, children }) => {
-  if (active) {
-    return <li className="active"><a>{children}</a></li>;
-  }
-
-  return (
-    <li>
-      <a
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          onClick();
-        }}
-        className="text-center filter"
-      >
-        {children}
-      </a>
-    </li>
-  );
-};
+const Filter = ({ filter, children }) => (
+  <NavLink to={filter === 'all' ? '' : filter}>
+    {children}
+  </NavLink>
+);
 
 Filter.propTypes = {
-  active: PropTypes.bool,
-  children: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  filter: PropTypes.oneOf(['all', 'completed', 'active']).isRequired,
+  children: PropTypes.node.isRequired
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  active: ownProps.filter === state.filter
-});
-
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick() {
-    dispatch(changeFilter(ownProps.filter));
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default Filter;
