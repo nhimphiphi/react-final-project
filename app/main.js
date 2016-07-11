@@ -1,5 +1,9 @@
-// import React from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App.js';
+import Root from './components/Root.js';
+import todoStore from './store/todoStore';
 
-render(App, document.querySelector('#root'));
+render(
+  <Root store={todoStore} />,
+  document.querySelector('#root')
+);

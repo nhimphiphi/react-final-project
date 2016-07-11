@@ -29,18 +29,14 @@ Filter.propTypes = {
   onClick: PropTypes.func
 };
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    active: ownProps.filter === state.filter
-  };
-};
+const mapStateToProps = (state, ownProps) => ({
+  active: ownProps.filter === state.filter
+});
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onClick: () => {
-      dispatch(changeFilter(ownProps.filter));
-    }
-  };
-};
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onClick() {
+    dispatch(changeFilter(ownProps.filter));
+  }
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
