@@ -1,15 +1,14 @@
+import { v4 } from 'node-uuid';
 import {
   ADD_TODO,
   TOGGLE_TODO,
   CHANGE_FILTER
 } from '../constants';
 
-let newTodoId = 0;
-
 export const addTodo = (text) => {
   return {
     type: ADD_TODO,
-    id: newTodoId++,
+    id: v4(),
     text
   };
 };

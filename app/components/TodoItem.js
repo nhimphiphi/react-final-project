@@ -10,7 +10,7 @@ const TodoItem = ({ id, text, completed, onToggle }) => (
 );
 
 TodoItem.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   text: PropTypes.string,
   completed: PropTypes.bool,
   onToggle: PropTypes.func

@@ -10,8 +10,8 @@ import {
 
 const TodoList = ({ todos, ...rest }) => (
   <ul className="todo-list row">
-    {todos.map((todo, key) => (
-      <TodoItem {...todo} {...rest} key={key} />
+    {todos.map((todo) => (
+      <TodoItem {...todo} {...rest} key={todo.id} />
     ))}
   </ul>
 );
