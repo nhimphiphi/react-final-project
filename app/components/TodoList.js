@@ -1,12 +1,9 @@
 import React, { PropTypes } from 'react';
+import { withRouter } from 'react-router';
 import TodoItem from './TodoItem';
 import { connect } from 'react-redux';
 import { toggleTodo } from '../actions/todo';
-import {
-  FILTER_ALL,
-  FILTER_ACTIVE,
-  FILTER_COMPLETED
-} from '../constants';
+import { visibleTodos } from '../reducers';
 
 const TodoList = ({ todos, ...rest }) => (
   <ul className="todo-list row">
@@ -21,29 +18,17 @@ TodoList.propTypes = {
   onToggle: PropTypes.func
 };
 
-const visibleTodos = (todos, filter) => {
-  switch (filter) {
-    case FILTER_ALL:
-      return todos;
-    case FILTER_ACTIVE:
-      return todos.filter(t => !t.completed);
-    case FILTER_COMPLETED:
-      return todos.filter(t => t.completed);
-    default:
-      return todos;
-  }
+const mapStateToProps = (state, { params }) => ({
+  todos: visibleTodos(state, params.filter || 'all')
+});
+
+const mapDispatchToProps = {
+  onToggle: toggleTodo
 };
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    todos: visibleTodos(state.todos, ownProps.filter)
-  };
-};
+const VisibleTodoList = withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList));
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onToggle: (id) => dispatch(toggleTodo(id))
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default VisibleTodoList;

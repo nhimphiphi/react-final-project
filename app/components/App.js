@@ -3,10 +3,10 @@ import AddTodo from './AddTodo';
 import TodoList from './TodoList';
 import FilterList from './FilterList';
 
-const App = ({ params }) => (
+const App = () => (
   <div className="container">
     <AddTodo />
-    <TodoList filter={params.filter || 'all'} />
+    <TodoList />
     <FilterList />
   </div>
 );
