@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 const AddTodo = ({ onClick }) => {
   let input;
   const addNewTodoAndReset = () => {
+    // TODO: check empty value first
     onClick(input.value);
     input.value = '';
   };

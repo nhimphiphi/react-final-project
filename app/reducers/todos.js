@@ -1,3 +1,4 @@
+import { v4 } from 'node-uuid';
 import {
   ADD_TODO,
   TOGGLE_TODO,
@@ -10,7 +11,7 @@ const todo = (state, action) => {
   switch (action.type) {
     case ADD_TODO:
       return {
-        id: action.id,
+        id: v4(),
         text: action.text,
         completed: false
       };
