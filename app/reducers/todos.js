@@ -1,10 +1,7 @@
 import { v4 } from 'node-uuid';
 import {
   ADD_TODO,
-  TOGGLE_TODO,
-  FILTER_ALL,
-  FILTER_ACTIVE,
-  FILTER_COMPLETED
+  TOGGLE_TODO
 } from '../constants';
 
 const todo = (state, action) => {
@@ -48,16 +45,3 @@ const todos = (state = [], action) => {
 };
 
 export default todos;
-
-export const visibleTodos = (state, filter) => {
-  switch (filter) {
-    case FILTER_ALL:
-      return state;
-    case FILTER_ACTIVE:
-      return state.filter(t => !t.completed);
-    case FILTER_COMPLETED:
-      return state.filter(t => t.completed);
-    default:
-      throw new Error(`Unknown filter: ${filter}.`);
-  }
-};
