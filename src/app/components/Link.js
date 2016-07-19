@@ -24,8 +24,4 @@ Link.propTypes = {
   onClick: PropTypes.func.isRequired
 }
 
-<<<<<<< HEAD
 export default Link;
-=======
-export default Link;
->>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
