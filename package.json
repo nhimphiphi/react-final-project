@@ -1,0 +1,45 @@
+{
+  "name": "react-final-project",
+  "version": "1.0.0",
+  "description": "final project for trainees at company: todolist",
+  "main": "app/App.js",
+  "dependencies": {
+    "babel-polyfill": "^6.9.1",
+    "path": "^0.12.7",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.5.2",
+    "redux": "^3.5.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.23.1",
+    "json-loader": "^0.5.4",
+    "postcss-loader": "^0.9.1",
+    "react-transform-hmr": "^1.0.4",
+    "redux-devtools": "^3.3.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phanhoangloc/react-final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phanhoangloc/react-final-project/issues"
+  },
+  "homepage": "https://github.com/phanhoangloc/react-final-project#readme"
+}

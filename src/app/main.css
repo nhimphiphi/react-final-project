@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.todo-app {
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.todo-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.todo-list li {
+  line-height: 24px;
+}
+
+.todo-list li .toggle {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px 0 0;
+}
+
+.todo-list li label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input-form input {
+  padding: 8px 10px;
+  font-size: 16px;
+  line-height: 14px;
+  width: 72%;
+}
+
+.btn-add {
+  border-radius: 3px;
+  background: #000;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  margin-left: 10px;
+}
+
+.filter-link a {
+  color: red;
+  text-decoration: none;
+}
+
+.text-underline,
+.text-underline label {
+  text-decoration: line-through;
+}
+
+.text-none {
+  text-decoration: none;
+}
+
+.filter-link {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.filter-link li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.filter-link li {
+  cursor: pointer;
+  color: red;
+}
+
+.filter-link li span,
+.filter-link li span a {
+  color: #000;
+  cursor: default;
+}
