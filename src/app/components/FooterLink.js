@@ -1,5 +1,4 @@
 import React from 'react';
-import { Router, Route, Link, browserHistory } from 'react-router';
 import constants from '../constants';
 import FilterLink from '../containers/FilterLink';
 
