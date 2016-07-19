@@ -4,9 +4,10 @@ let nextTodoId = 0;
 
 const todoActionCreators = {
   addTodo(text) {
-      return {
+    let nextId = !!localStorage.getItem('dataState') ? localStorage.getItem('dataState').length : 0;
+    return {
       type: constants.ADD_TODO,
-      id: nextTodoId++,
+      id: nextId,
       text
     }
   },
