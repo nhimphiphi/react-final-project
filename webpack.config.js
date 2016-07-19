@@ -35,7 +35,11 @@ module.exports = {
 
   devServer: {
     contentBase: "./public",
+<<<<<<< HEAD
     port: 5000,
+=======
+    port: 7000,
+>>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
     colors: true,
     historyApiFallback: true,
     inline: true

@@ -1,6 +1,10 @@
 import constants from '../constants';
 
 const todo = (state, action) => {
+<<<<<<< HEAD
+=======
+  console.log('todos reducer', state, action);
+>>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
   switch (action.type) {
     case constants.ADD_TODO:
       return {

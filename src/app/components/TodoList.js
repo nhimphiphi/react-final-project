@@ -7,7 +7,13 @@ const TodoList = ({ todos, onTodoClick }) => (
       <TodoItem
         key={todo.id}
         {...todo}
+<<<<<<< HEAD
         onClick={() => onTodoClick(todo.id)}
+=======
+        onClick={() => {
+          onTodoClick(todo.id);
+        }}
+>>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
       />
     )}
   </ul>

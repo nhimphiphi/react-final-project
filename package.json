@@ -10,7 +10,12 @@
     "react-dom": "^15.2.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.2",
+<<<<<<< HEAD
     "redux": "^3.5.2"
+=======
+    "redux": "^3.5.2",
+    "redux-storage": "^4.0.1"
+>>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
@@ -20,6 +25,10 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
     "css-loader": "^0.23.1",
+<<<<<<< HEAD
+=======
+    "html-webpack-plugin": "^2.22.0",
+>>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
     "json-loader": "^0.5.4",
     "postcss-loader": "^0.9.1",
     "react-transform-hmr": "^1.0.4",
@@ -29,17 +38,31 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nhimphiphi/react-final-project.git"
+=======
+    "start": "webpack-dev-server --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phanhoangloc/react-final-project.git"
+>>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
+<<<<<<< HEAD
     "url": "https://github.com/nhimphiphi/react-final-project/issues"
   },
   "homepage": "https://github.com/nhimphiphi/react-final-project#readme"
+=======
+    "url": "https://github.com/phanhoangloc/react-final-project/issues"
+  },
+  "homepage": "https://github.com/phanhoangloc/react-final-project#readme"
+>>>>>>> dc77c377297b6ed0caa0a6c2e2036292957178b4
 }
