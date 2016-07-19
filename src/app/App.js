@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { Router, Route, browserHistory } from 'react-router';
 
 import todoStore from './store/todoStore'
 
@@ -26,6 +27,8 @@ export default App;
 
 render((
   <Provider store={todoStore}>
-    <App />
+    <Router history={browserHistory}>
+      <Route path="/" component={App}/>
+    </Router>
   </Provider>
 ), document.querySelector('#root'))
